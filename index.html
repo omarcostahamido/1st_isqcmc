@@ -38,7 +38,7 @@
   <br>
 
   <!-- tho body of the page, following a slightly modified version of the github template -->
-  <div class="outer">
+  <div class="outer main_content_wrap">
     <section class="inner">
       <p style="text-align: center;"><a href="https://iccmr-quantum.github.io/"><img src="./img_white.png" alt="img" height="100px"></a></p>
       <!-- <h2 id="fri-19-and-sat-20-november-2021">Fri 19 and Sat 20 November, 2021</h2>
@@ -78,9 +78,6 @@
       <ul>
          <li><em>Eduardo R. Miranda and Bob Coecke</em> </li>
       </ul>
-      <div class="card">
-        <div class="blobyellow"></div>
-      </div>
       <h3 id="tutorial-i-10-00-12-00-">Tutorial I (10:00 - 12:00)</h3>
       <p>10:00 - 12:00: <strong>Introduction to Quantum Computing for Musicians – Part 1</strong></p>
       <ul>
@@ -108,9 +105,6 @@
          <li><em>Konstantinos Meichanetzidis</em> (Cambridge Quantum, UK)</li>
          <li><em>Bob Coecke</em> (Cambridge Quantum, UK)</li>
       </ul>
-      <div class="card">
-        <div class="blobgreen"></div>
-      </div>
       <h3 id="research-papers-session-ii-15-30-18-00-">Research Papers Session II (15:30 –  18:00)</h3>
       <p>15:30 – 16:00: <strong>Quantum Cellular Automata Music</strong></p>
       <ul>
@@ -137,9 +131,6 @@
       <ul>
          <li><em>Scott Oshiro</em> (Stanford University, USA)</li>
       </ul>
-      <div class="card">
-        <div class="blobblue"></div>
-      </div>
       <h3 id="musical-demonstrations-18-30-19-30-">Musical Demonstrations (18:30 - 19:30)</h3>
       <p>18:30 – 19:30: <strong>t.b.a.</strong></p>
       <ul>
@@ -161,9 +152,6 @@
          <li><em>Rajiv Mistry</em> (Pivotport, USA)</li>
          <li><em>Jonathan Ortega</em> (Purdue University, USA)</li>
       </ul>
-      <div class="card">
-        <div class="blobred"></div>
-      </div>
       <h3 id="research-papers-session-iv-13-00-14-30-">Research Papers Session IV (13:00 - 14:30)</h3>
       <p>13:00 – 13:30: <strong>Photonic Sound Synthesis</strong></p>
       <ul>
@@ -198,9 +186,11 @@
       </ul>
       <h1 id="registration">Registration</h1>
       <script type="text/javascript">
-        function SubmitForm(input){
-          var jFirst = document.getElementById("fname").value;
-          var jEmail = document.getElementById("femail").value;
+        function SubmitForm(){
+          var jEmail = document.getElementById("jEmail").value;
+          var jNome = document.getElementById("jNome").value;
+          var jAffiliation = document.getElementById("jAffiliation").value;
+          var jSocial = document.getElementById("jSocial").value;
 
           // var URL = "https://docs.google.com/forms/d/e/1FAIpQLSdteKjPwthYaLsD6SfiW50kp18tr3O5ZOu1L45y4pkb_PxDkQ/formResponse?usp=pp_url&entry.1610810690=" + encodeURIComponent(jFirst) + "&entry.1280084707=" + encodeURIComponent(jEmail) + "&submit=Submit";
           var URL = "https://docs.google.com/forms/d/e/1FAIpQLSesTDWOj083KvxhPJN9ocgijGE7HNvb6pTP-rnI6gC8bhgCHQ/formResponse?usp=pp_url&entry.222734838=" + encodeURIComponent(jEmail) + "&entry.2092238618=" + encodeURIComponent(jNome) + "&entry.1556369182=" + encodeURIComponent(jAffiliation) + "&entry.1612254025=" + encodeURIComponent(jSocial) + "&submit=Submit";
@@ -210,14 +200,9 @@
           //&entry.1556369182=ICCMR
           //&entry.1612254025=iccmr-quantum.github.io
           document.getElementById("form").innerHTML = "Thank you.";
-          // if (input==1) {
-            httpGet(URL);
-          // } else {
+          alert(URL);
+          httpGet(URL);
           //   window.open(URL,"_self")
-          // }
-          // alternatively show google forms confirmation page
-          // alert("Thank you for registering!");
-          // thankyou();
         }
         function httpGet(theUrl)
           {
@@ -230,10 +215,10 @@
       <form id="form">
         <!-- onSubmit="SubmitForm()" -->
         <input type="text" id="jEmail" name="jEmail" placeholder="Email..."><br>
-        <input type="text" id="jNome" name="fNome" placeholder="Name..."><br>
+        <input type="text" id="jNome" name="jNome" placeholder="Name..."><br>
         <input type="text" id="jAffiliation" name="jAffiliation" placeholder="Affiliation..."><br>
         <input type="text" id="jSocial" name="jSocial" placeholder="Social media link..."><br><br>
-        <input type="button" value="Submit" onclick="SubmitForm(1)">
+        <input type="button" value="Submit" onclick="SubmitForm()">
         <!-- <input type="button" value="Submit" onclick="SubmitForm(2)" style="background-color: blueviolet;"> -->
         
         <!-- <button type="button" onclick="alert('Hello world!')">Click Me!</button> -->
