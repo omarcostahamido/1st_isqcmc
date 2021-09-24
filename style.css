@@ -5,7 +5,7 @@ html {
 
 .heading {
   font-family: "Glory", sans-serif;
-  background-image: radial-gradient(circle, #888, #000 13em);
+  background-image: radial-gradient(circle, #ddd, #000 13em);
 }
 
 .card {
@@ -21,7 +21,7 @@ html {
   left: -6em;
   width: 12em;
   height: 10em;
-  background-color: #888;
+  background-color: #ddd;
 }
 
 .text {
@@ -363,6 +363,10 @@ ul {
     left: -6em;
   }
 
+  .blobyellow, .blobgreen, .blobblue, .blobred {
+    filter: blur(8em);
+  }
+
   .inner {
     min-width: 320px;
     max-width: 480px;
@@ -405,13 +409,17 @@ ul {
     max-width: 320px;
   }
 
+  .back, .text {
+    left: -6em;
+  }
+
+  .blobyellow, .blobgreen, .blobblue, .blobred {
+    filter: blur(8em);
+  }
+  
   .inner {
     min-width: 240px;
     max-width: 320px;
-  }
-
-  .back, .text {
-    left: -6em;
   }
 
   html {
