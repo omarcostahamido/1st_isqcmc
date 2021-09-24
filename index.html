@@ -212,19 +212,36 @@
             return xmlHttp.responseText;
           }
       </script>
-      <form id="form">
+      <!-- <form id="form"> -->
         <!-- onSubmit="SubmitForm()" -->
-        <input type="text" id="jEmail" name="jEmail" placeholder="Email..."><br>
+
+        <!-- <input type="text" id="jEmail" name="jEmail" placeholder="Email..."><br>
         <input type="text" id="jNome" name="jNome" placeholder="Name..."><br>
         <input type="text" id="jAffiliation" name="jAffiliation" placeholder="Affiliation..."><br>
         <input type="text" id="jSocial" name="jSocial" placeholder="Social media link..."><br><br>
-        <input type="button" value="Submit" onclick="SubmitForm()">
+        <input type="button" value="Submit" onclick="SubmitForm()"> -->
         <!-- <input type="button" value="Submit" onclick="SubmitForm(2)" style="background-color: blueviolet;"> -->
         
         <!-- <button type="button" onclick="alert('Hello world!')">Click Me!</button> -->
         <!-- where the Google Forms link says /viewform?, replace that with /formResponse?. Additionally, add &submit=Submit to the end of the URL. -->
-      </form> 
-
+      <!-- </form>  -->
+      <script src="http://googleformrestyler.apixml.net/GoogleFormStyler.js"
+        form="https://docs.google.com/forms/d/e/1FAIpQLSesTDWOj083KvxhPJN9ocgijGE7HNvb6pTP-rnI6gC8bhgCHQ/viewform?embedded=true">
+        // var myobj = document.getElementsByClassName("freebirdFormviewerViewNavigationPasswordWarning");
+        // myobj.remove();
+      </script>
+      <style>
+      .freebirdFormviewerViewFooterFooterContainer {
+          display: none !important
+      }
+      .freebirdFormviewerViewNoPadding {
+        display: none;
+      }
+      .freebirdFormviewerViewNavigationPasswordWarning {
+        display: none;
+      }
+      </style>
+      <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSesTDWOj083KvxhPJN9ocgijGE7HNvb6pTP-rnI6gC8bhgCHQ/viewform?embedded=true" width="640" height="1165" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
     </section>
     <footer style="color: #888; text-align: center;">
       webdesign by <a style="color: #888" href="http://www.omarcostahamido.com">OCH</a>
