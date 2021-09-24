@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./style.css">
 
 </head>
-<body>
+<body style="background-color:#111;">
   <!-- the brand new header :) -->
     <br>
   <div id="PH-title-card" class="text" style="visibility: hidden; position: relative;font-family: 'Glory', sans-serif; top: 0em; left: 0em;">
@@ -225,22 +225,34 @@
         <!-- <button type="button" onclick="alert('Hello world!')">Click Me!</button> -->
         <!-- where the Google Forms link says /viewform?, replace that with /formResponse?. Additionally, add &submit=Submit to the end of the URL. -->
       <!-- </form>  -->
-      <script src="http://googleformrestyler.apixml.net/GoogleFormStyler.js"
-        form="https://docs.google.com/forms/d/e/1FAIpQLSesTDWOj083KvxhPJN9ocgijGE7HNvb6pTP-rnI6gC8bhgCHQ/viewform?embedded=true">
-        // var myobj = document.getElementsByClassName("freebirdFormviewerViewNavigationPasswordWarning");
-        // myobj.remove();
-      </script>
-      <style>
-      .freebirdFormviewerViewFooterFooterContainer {
-          display: none !important
-      }
-      .freebirdFormviewerViewNoPadding {
-        display: none;
-      }
-      .freebirdFormviewerViewNavigationPasswordWarning {
-        display: none;
-      }
-      </style>
+      <!-- <div id="googleform" style="text-align: justify; place-items:left; margin: 0;"> -->
+        <script src="http://googleformrestyler.apixml.net/GoogleFormStyler.js"
+          form="https://docs.google.com/forms/d/e/1FAIpQLSesTDWOj083KvxhPJN9ocgijGE7HNvb6pTP-rnI6gC8bhgCHQ/viewform?embedded=true">
+          // var myobj = document.getElementsByClassName("freebirdFormviewerViewNavigationPasswordWarning");
+          // myobj.remove();
+        </script>
+        <style type="text/css">
+          /* needs to be done after the loading of the form... */
+          .freebirdFormviewerViewNavigationSubmitButton {
+            margin-left: auto; 
+            margin-right: auto; 
+          }
+        </style>
+        <!-- intercept button click, not very good because it is before form submission -->
+        <!-- <script type="text/javascript">
+          var ifrm = document.createElement("iframe");
+          ifrm.setAttribute("name", "swallow");
+          document.body.appendChild(ifrm);
+          ifrm.style.display = 'none';
+          document.forms[0].target="swallow";
+          var button = document.querySelectorAll("div[role='button']")[0];
+          button.addEventListener("click", function()
+          {
+            alert('Here you can intercept the response');
+          }, true); 
+        </script> -->
+        
+      <!-- </div> -->
       <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSesTDWOj083KvxhPJN9ocgijGE7HNvb6pTP-rnI6gC8bhgCHQ/viewform?embedded=true" width="640" height="1165" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
     </section>
     <footer style="color: #888; text-align: center;">

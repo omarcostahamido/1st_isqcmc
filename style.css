@@ -224,8 +224,8 @@ html {
   z-index: 10;
 }*/
 
-input[type=text] {
-  /*color: white;*/
+/*input[type=text] {
+  color: white;
   color:#373737;
   padding: 12px 20px;
   margin: 8px 0;
@@ -234,7 +234,7 @@ input[type=text] {
   border-radius: 4px;
   box-sizing: border-box;
   background-color: #ddd;
-}
+}*/
 input[type=button] {
   background-color: #4CAF50;
   color: white;
@@ -246,9 +246,35 @@ input[type=button] {
 }
 
 /*google forms overwrite?*/
-.freebirdFormviewerViewHeaderHeader {
-  background-color: darkred;
+.freebirdFormviewerViewFooterFooterContainer {
+    display: none !important
 }
+.freebirdFormviewerViewNoPadding {
+  display: none;
+}
+.freebirdFormviewerViewNavigationPasswordWarning {
+  display: none;
+}
+.freebirdFormviewerComponentsQuestionBaseTitleDescContainer {
+  margin: 0;
+}
+.freebirdFormviewerViewNavigationSubmitButton {
+  /*margin: 0;*/
+  position: relative;
+  left: 0; 
+  right: 0; 
+  /*width: 100px;*/
+  margin-left: auto; 
+  margin-right: 0; 
+  max-width: 100%;
+}
+.freebirdFormviewerViewNavigationProgress {
+  display: none !important
+}
+.freebirdFormviewerViewNavigationClearButton {
+  display: none !important
+}
+
 
 /*adapted from github template*/
 .main_content_wrap{
