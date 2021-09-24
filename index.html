@@ -202,13 +202,19 @@
           var jFirst = document.getElementById("fname").value;
           var jEmail = document.getElementById("femail").value;
 
-          var URL = "https://docs.google.com/forms/d/e/1FAIpQLSdteKjPwthYaLsD6SfiW50kp18tr3O5ZOu1L45y4pkb_PxDkQ/formResponse?usp=pp_url&entry.1610810690=" + encodeURIComponent(jFirst) + "&entry.1280084707=" + encodeURIComponent(jEmail) + "&submit=Submit";
+          // var URL = "https://docs.google.com/forms/d/e/1FAIpQLSdteKjPwthYaLsD6SfiW50kp18tr3O5ZOu1L45y4pkb_PxDkQ/formResponse?usp=pp_url&entry.1610810690=" + encodeURIComponent(jFirst) + "&entry.1280084707=" + encodeURIComponent(jEmail) + "&submit=Submit";
+          var URL = "https://docs.google.com/forms/d/e/1FAIpQLSesTDWOj083KvxhPJN9ocgijGE7HNvb6pTP-rnI6gC8bhgCHQ/formResponse?usp=pp_url&entry.222734838=" + encodeURIComponent(jEmail) + "&entry.2092238618=" + encodeURIComponent(jNome) + "&entry.1556369182=" + encodeURIComponent(jAffiliation) + "&entry.1612254025=" + encodeURIComponent(jSocial) + "&submit=Submit";
+          // https://docs.google.com/forms/d/e/1FAIpQLSesTDWOj083KvxhPJN9ocgijGE7HNvb6pTP-rnI6gC8bhgCHQ/formResponse?usp=pp_url
+          //&entry.222734838=email@gmail.com
+          //&entry.2092238618=Nome
+          //&entry.1556369182=ICCMR
+          //&entry.1612254025=iccmr-quantum.github.io
           document.getElementById("form").innerHTML = "Thank you.";
-          if (input==1) {
+          // if (input==1) {
             httpGet(URL);
-          } else {
-            window.open(URL,"_self")
-          }
+          // } else {
+          //   window.open(URL,"_self")
+          // }
           // alternatively show google forms confirmation page
           // alert("Thank you for registering!");
           // thankyou();
@@ -223,13 +229,17 @@
       </script>
       <form id="form">
         <!-- onSubmit="SubmitForm()" -->
-        <input type="text" id="fname" name="usp=pp_url&entry.1610810690" placeholder="name..."><br>
-        <input type="text" id="femail" name="entry.1280084707" placeholder="email..."><br><br>
+        <input type="text" id="jEmail" name="jEmail" placeholder="Email..."><br>
+        <input type="text" id="jNome" name="fNome" placeholder="Name..."><br>
+        <input type="text" id="jAffiliation" name="jAffiliation" placeholder="Affiliation..."><br>
+        <input type="text" id="jSocial" name="jSocial" placeholder="Social media link..."><br><br>
         <input type="button" value="Submit" onclick="SubmitForm(1)">
-        <input type="button" value="Submit" onclick="SubmitForm(2)" style="background-color: blueviolet;">
+        <!-- <input type="button" value="Submit" onclick="SubmitForm(2)" style="background-color: blueviolet;"> -->
+        
         <!-- <button type="button" onclick="alert('Hello world!')">Click Me!</button> -->
         <!-- where the Google Forms link says /viewform?, replace that with /formResponse?. Additionally, add &submit=Submit to the end of the URL. -->
       </form> 
+
     </section>
     <footer style="color: #888; text-align: center;">
       webdesign by <a style="color: #888" href="http://www.omarcostahamido.com">OCH</a>
